@@ -10,6 +10,7 @@ export default function Dndle() {
     const [input, setInput] = useState("")
     const appendInput = (value:string) => setInput((current) => current+value)
     const submit = async () => {
+        appendHistory("> " + input)
         appendHistory((await (await fetch("https://r3d6-api.treegnome.tech/" + input)).text()))
         setInput("") 
     }
