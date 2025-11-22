@@ -11,7 +11,7 @@ export default function Dndle() {
     const appendInput = (value:string) => setInput((current) => current+value)
     const submit = async () => {
         appendHistory("> " + input)
-        appendHistory((await (await fetch("https://r3d6-api.treegnome.tech/" + input)).text()))
+        appendHistory((await (await fetch("https://r3d6-api.x.codetje.app/" + input)).text()))
         setInput("") 
     }
     const deleteInput = () => setInput(input.slice(0, -1))
